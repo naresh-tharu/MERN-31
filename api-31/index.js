@@ -1,6 +1,7 @@
 import http, { createServer } from "http";
 import app from "./src/config/express.config.js";
 import "dotenv/config";
+//express app mounting
 const server = createServer(app);
 
 const port = process.env.PORT || 3005;
