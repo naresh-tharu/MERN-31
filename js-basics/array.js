@@ -48,8 +48,7 @@ let user_obj_2= {
 console.log(user_obj_1.name);
 console.log(user_obj_2.name)
 
-let imagesExts = ["jpg", "jpeg", "png", "gif", "svg", "webp"];
-let ext = "jpg";
+
 */
 
 /**Object */
@@ -106,7 +105,6 @@ const allProducts = [
  * Student Email:...........
  * Student College Name:............
  */
-
 
 /*
 const students = [
@@ -239,8 +237,7 @@ console.log(`Student College: ${students[5].college}`)
 
 */
 
-
-const allUsers =[]; //empty
+const allUsers = []; //empty
 
 /**
  * Insert data allUsers
@@ -249,21 +246,26 @@ const allUsers =[]; //empty
  * c. at any position
  */
 
-const user1={
-  name:"user one",
-  email:"user@one.com",
-  address:"Kathmandu"
-}
+const user1 = {
+  name: "user one",
+  email: "user@one.com",
+  address: "Kathmandu",
+};
 
-const user2={
-  name:"user two",
-  email:"user@two.com",
-  address:"Lalitpur"
-}
+const user2 = {
+  name: "user two",
+  email: "user@two.com",
+  address: "Lalitpur",
+};
 
+const user3 = {
+  name: "user three",
+  email: "user@three.com",
+  address: "Bhaktapur",
+};
 
 //last position
-allUsers.push(user1, user2)
+allUsers.push(user1, user2);
 // console.log(allUsers)
 
 //allUsers => 2 data
@@ -273,5 +275,81 @@ allUsers.push(user1, user2)
 allUsers.unshift(user2);
 // console.log(allUsers)
 
+/**splice */
 //any
 //[0, 1, 2]
+// console.log(allUsers);
+
+allUsers.splice(1, 1, user3);
+console.log(allUsers);
+
+const months = ["Jan", "March", "April", "June"];
+console.log(months);
+
+months.splice(1, 0, "Feb");
+console.log(months); //["Jan", "Feb", "March", "April", "June"];
+
+months.splice(4, 1, "May");
+console.log(months); //["Jan", "Feb", "March", "April", "May"];
+
+months.splice(5, 2, "June", "July");
+console.log(months);
+
+/**remove */
+// last, first, position
+
+//pop()
+const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+console.log(plants.pop()); //tomato
+console.log(plants); //['broccoli', 'cauliflower', 'cabbage', 'kale'];
+
+//shift()
+const numb = [1, 2, 3];
+console.log(numb.shift()); //1
+console.log(numb); //[2, 3]
+
+//splice();
+const num = [1, 2, 3, 4, 5, 6, 7];
+console.log(num)
+console.log(num.splice(2, 1)); //3
+console.log(num) //[1, 2, 4, 5, 6, 7]
+
+let arr =[];
+arr[1] = "value";
+console.log(arr) //[ <1 empty item>, 'value' ]
+let oneIndex = arr.splice(1,1)
+console.log(oneIndex) //[ 'value' ]
+
+arr[0] = "set another data";
+console.log(arr); //[ 'set another data' ]
+
+
+
+/**slice */
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+
+
+console.log(animals);
+console.log(animals.slice(1));
+console.log(animals.slice(1, 3));
+
+
+/**length */
+const animalName = ["ant", "bison", "camel", "duck", "elephant"];
+console.log(animalName.length) //5
+
+
+/**includes() */
+let imagesExts = ["jpg", "jpeg", "png", "gif", "svg", "webp"];
+let ext = "jpg";
+
+console.log(imagesExts.includes(ext))  //boolean
+
+const arr1= [1, 2,3];
+console.log(arr1.includes(2)); //true
+const pets = ['cat', 'dog', 'bat'];
+console.log(pets.includes('cat'));//true
+console.log(pets.includes('at'));//false
+
+//map, filter, reduce, forEach
